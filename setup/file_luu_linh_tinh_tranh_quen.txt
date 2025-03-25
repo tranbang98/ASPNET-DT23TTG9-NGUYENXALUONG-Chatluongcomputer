@@ -1,0 +1,24 @@
+d:
+
+mkdir ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer
+cd ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer
+git init
+
+ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer
+
+echo "# ASP.NET Project - NGUYEN XA LUONG" > README.md
+git add .
+git commit -m "Khởi tạo repo cho môn ASP.NET"
+
+
+git config user.name "Nguyen Xa Luong"
+
+git config user.email "nguyenxaluong@gmail.com"
+
+
+cách comit lên git
+echo "Bài tập ASP.NET" > bai_tap_1.txt
+git status                    # Thấy file mới
+git add bai_tap_1.txt
+git commit -m "Thêm bài tập 1"
+git push                      # Lưu lên GitHub
