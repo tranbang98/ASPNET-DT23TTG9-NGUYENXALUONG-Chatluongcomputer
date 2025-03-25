@@ -1,32 +1,31 @@
-# ASP.NET Project - Nguy?n X� Lu?ng
+﻿# ASP.NET Project - Nguyễn Xà Lượng
 
-## M� l?p: DT23TTG9  
-## M� d? �n: Chatluongcomputer
+## Mã lớp: DT23TTG9  
+## Mã dự  án: Chatluongcomputer
 
-### ?? Email: nguyenxaluong@gmail.com  
-### ?? S�T: 0866 879 248
-
----
-
-## ?? C?u tr�c thu m?c:
-
-- setup/ - T?p tin c�i d?t & d? li?u th? nghi?m
-- scr/ - M� ngu?n v� d? li?u th?
-- progress-report/ - B�o c�o ti?n d? (b?t bu?c)
-- 	hesis/ - T�i li?u d? �n (b?t bu?c)
-  - doc/ - File Word (.doc/.docx)
-  - pdf/ - File PDF
-  - html/ - T�i li?u web
-  - bs/ - B�o c�o tr�nh chi?u/video (.ppt/.avi)
-  - efs/ - T�i li?u tham kh?o
-- soft/ - Ph?n m?m s? d?ng [n?u c�]
-- docker/ - C?u h�nh docker [n?u c�]
+###  Email: nguyenxaluong@gmail.com  
+###  SĐT: 0866 879 248
 
 ---
 
-## ?? Hu?ng d?n s? d?ng
+## 📁 Cấu trúc thư mục:
 
-1. C�i d?t theo hu?ng d?n trong thu m?c setup/
-2. Ch?y chuong tr�nh trong scr/
-3. Xem b�o c�o v� t�i li?u trong progress-report/ v� 	hesis/
+- `setup/` - Tập tin cài đặt & dữ liệu thử nghiệm
+- `scr/` - Mã nguồn và dữ liệu thử
+- `progress-report/` - Báo cáo tiến độ (bắt buộc)
+- `thesis/` - Tài liệu đồ án (bắt buộc)
+  - `doc/` - File Word (.doc/.docx)
+  - `pdf/` - File PDF
+  - `html/` - Tài liệu web
+  - `abs/` - Báo cáo trình chiếu/video (.ppt/.avi)
+  - `refs/` - Tài liệu tham khảo
+- `soft/` - Phần mềm sử dụng [nếu có]
+- `docker/` - Cấu hình docker [nếu có]
 
+---
+
+## 📌 Hướng dẫn sử dụng
+
+1. Cài đặt theo hướng dẫn trong thư mục `setup/`
+2. Chạy chương trình trong `scr/`
+3. Xem báo cáo và tài liệu trong `progress-report/` và `thesis/`
