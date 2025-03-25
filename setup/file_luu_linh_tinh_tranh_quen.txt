@@ -1,0 +1,39 @@
+d:
+
+mkdir ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer
+cd ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer
+git init
+
+ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer
+
+echo "# ASP.NET Project - NGUYEN XA LUONG" > README.md
+git add .
+git commit -m "Khởi tạo repo cho môn ASP.NET"
+
+
+git config user.name "Nguyen Xa Luong"
+
+git config user.email "nguyenxaluong@gmail.com"
+
+
+cách comit lên git
+echo "x" > x.txt
+git status                    # Thấy file mới
+git add x.txt
+git commit -m "vb"
+git push                      # Lưu lên GitHub
+
+git add .
+git commit -m "Thêm cây thư mục chuẩn và .gitkeep"
+git push
+
+git add README.md
+git commit -m "Fix lỗi font README.md tiếng Việt"
+git push
+
+
+git status   
+git add -A
+(-A sẽ thêm cả thay đổi, xóa và thêm file mới)
+git commit -m "Xoá file không cần thiết"
+git push
