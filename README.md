@@ -27,5 +27,5 @@
 ## 📌 Hướng dẫn sử dụng
 
 1. Cài đặt theo hướng dẫn trong thư mục `setup/`
-2. Chạy chương trình trong `scr/`
+2. Soucre web `scr/`
 3. Xem báo cáo và tài liệu trong `progress-report/` và `thesis/`
