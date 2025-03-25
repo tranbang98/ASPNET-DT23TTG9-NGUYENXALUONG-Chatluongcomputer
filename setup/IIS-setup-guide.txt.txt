@@ -1,0 +1,97 @@
+===========================
+HƯỚNG DẪN CÀI ĐẶT IIS CHẠY WEB ASP.NET (.NET Framework)
+Tác giả: Nguyễn Xà Lượng
+MSSV: DT23TTG9
+===========================
+
+📌 Mục tiêu:
+Chạy website ASP.NET từ thư mục `scr/` bằng IIS, KHÔNG cần mở Visual Studio.
+
+---------------------------
+1. BẬT IIS TRÊN WINDOWS
+---------------------------
+✅ Bước 1: Mở "Windows Features"
+
+- Nhấn `Win + S` > gõ `Windows Features`
+- Chọn `Turn Windows features on or off`
+
+✅ Bước 2: Bật các thành phần sau:
+
+[✔] Internet Information Services  
+[✔] Web Management Tools  
+[✔] World Wide Web Services  
+ └── [✔] Application Development Features  
+     ├─ [✔] .NET Extensibility 4.x  
+     ├─ [✔] ASP.NET 4.x  
+     ├─ [✔] ISAPI Extensions  
+     ├─ [✔] ISAPI Filters  
+ └── [✔] Common HTTP Features  
+     ├─ [✔] Static Content  
+     ├─ [✔] Default Document  
+     ├─ [✔] Directory Browsing  
+     └─ [✔] HTTP Errors  
+
+Sau đó nhấn **OK** để Windows cài đặt.
+
+---------------------------
+2. CẤU HÌNH WEBSITE TRONG IIS
+---------------------------
+✅ Bước 1: Mở IIS Manager
+
+- Nhấn `Win + R` > gõ `inetmgr` > Enter
+
+✅ Bước 2: Tạo website mới
+
+- Trong thanh bên trái, chuột phải vào `Sites` > chọn `Add Website...`
+- Điền các thông tin sau:
+
+    Site name: ChatluongComputer  
+    Physical path: D:\ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer\scr  
+    Port: 8080 *(hoặc 80 nếu chưa có web nào dùng)*
+
+- Nhấn OK
+
+✅ Bước 3: Kiểm tra Application Pool
+
+- Trong IIS Manager, chọn `Application Pools`  
+- Tìm app tương ứng tên web (VD: `ChatluongComputer`)  
+- Click chuột phải > `Basic Settings...`  
+- Chọn `.NET CLR version`: **v4.0.30319**  
+- Managed pipeline: **Integrated**
+
+---------------------------
+3. CHẠY WEBSITE
+---------------------------
+- Mở trình duyệt
+- Truy cập: http://localhost:8080/Default.aspx *(hoặc tùy theo file .aspx chính)*
+
+---------------------------
+4. SỬA LỖI PHỔ BIẾN
+---------------------------
+
+❌ 500.19 - Error config:
+→ Kiểm tra file `web.config` có bị lỗi cú pháp
+
+❌ Handler "PageHandlerFactory-Integrated" has a bad module
+→ ASP.NET chưa được đăng ký → chạy lệnh sau bằng CMD Admin:
+
+    %windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -i
+
+❌ Access Denied:
+→ Cấp quyền "Read" cho thư mục web (chuột phải thư mục > Properties > Security)
+
+---------------------------
+5. GỠ WEB HOẶC ĐỔI PORT
+---------------------------
+- Mở `inetmgr` > Chọn website > `Stop` hoặc `Remove`
+- Có thể đổi port khác như 8088, 8090,... nếu bị trùng
+
+---------------------------
+
+📎 Ghi chú:
+- Nếu muốn chạy bằng domain ảo: chỉnh `hosts` file trỏ `127.0.0.1` về tên mong muốn
+- Có thể thêm file `start.bat` để mở nhanh trình duyệt
+
+===========================
+CHÚC BẠN THÀNH CÔNG 🎉
+===========================
