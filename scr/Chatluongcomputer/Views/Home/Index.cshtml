@@ -3,20 +3,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
+
     <!-- Header -->
-    <header class="py-3 border-bottom d-flex justify-content-between align-items-center">
-        <div>
-            <img src="/Content/Image/logo/logo.jpg" alt="Logo" height="40" />
-        </div>
-        <div class="input-group w-50">
-            <input type="text" class="form-control" placeholder="Tìm sản phẩm...">
-            <button class="btn btn-primary">Tìm kiếm</button>
-        </div>
-        <div>
-            <a href="#">Đăng nhập</a> | <a href="#">Giỏ hàng (0)</a>
-        </div>
-    </header>
+    @Html.Partial("_Header")
 
     <!-- Hero Banner -->
     <section class="my-4 bg-light p-4 text-center">
@@ -39,7 +28,7 @@
             {
                 <div class="col-md-3 mb-4">
                     <div class="card">
-                        <img src="/Content/product.png" class="card-img-top" alt="Sản phẩm">
+                        <img src="~/Content/Images/Products/Mainboards/ASUS-H110-K.png" class="card-img-top" alt="Sản phẩm">
                         <div class="card-body text-center">
                             <h5 class="card-title">Product name</h5>
                             <p>500.000đ</p>
