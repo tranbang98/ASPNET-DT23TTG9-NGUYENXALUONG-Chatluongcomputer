@@ -77,3 +77,7 @@ D:\ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer\scr\Chatluongcomputer\obj\Deb
 D:\ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer\scr\Chatluongcomputer\obj\Debug\Chatluon.54939692.Up2Date
 D:\ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer\scr\Chatluongcomputer\obj\Debug\Chatluongcomputer.dll
 D:\ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer\scr\Chatluongcomputer\obj\Debug\Chatluongcomputer.pdb
+D:\ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer\scr\Chatluongcomputer\bin\EntityFramework.dll
+D:\ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer\scr\Chatluongcomputer\bin\EntityFramework.SqlServer.dll
+D:\ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer\scr\Chatluongcomputer\bin\EntityFramework.xml
+D:\ASPNET-DT23TTG9-NGUYENXALUONG-Chatluongcomputer\scr\Chatluongcomputer\bin\EntityFramework.SqlServer.xml

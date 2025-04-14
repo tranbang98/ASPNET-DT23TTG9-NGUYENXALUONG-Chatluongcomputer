@@ -81,7 +81,14 @@ CREATE TABLE TrackingCode (
     TrackingNumber NVARCHAR(100),
     Status NVARCHAR(50)
 );
-
+-- Tạo bảng Payments
+CREATE TABLE Payments (
+    PaymentId INT PRIMARY KEY IDENTITY,
+    OrderId INT FOREIGN KEY REFERENCES Orders(OrderId),
+    Amount DECIMAL(18, 2),
+    PaymentDate DATETIME DEFAULT GETDATE(),
+    Method NVARCHAR(50) -- e.g. "Credit Card", "COD", "Momo"
+);
 -- Tạo SP thêm sản phẩm
 GO
 CREATE PROCEDURE usp_AddProduct

@@ -1,0 +1,26 @@
+﻿@model Chatluongcomputer.Models.User
+
+@{
+    ViewBag.Title = "Đăng nhập quản trị";
+}
+
+<h2>Đăng nhập Admin</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.Message as string))
+{
+    <div class="alert alert-danger">@ViewBag.Message</div>
+}
+
+@using (Html.BeginForm("Login", "Admin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBox("username", null, new { @class = "form-control", placeholder = "Tên đăng nhập" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PasswordHash)
+        @Html.Password("password", null, new { @class = "form-control", placeholder = "Mật khẩu" })
+    </div>
+    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+}

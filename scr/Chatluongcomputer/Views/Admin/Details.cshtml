@@ -1,0 +1,28 @@
+﻿@model Chatluongcomputer.Models.User
+@{
+    Layout = null;
+    ViewBag.Title = "Chi tiết Admin";
+}
+
+<h4>Chi tiết người dùng</h4>
+<dl class="dl-horizontal">
+    <dt>ID</dt>
+    <dd>@Model.UserId</dd>
+
+    <dt>Tài khoản</dt>
+    <dd>@Model.Username</dd>
+
+    <dt>Họ tên</dt>
+    <dd>@Model.FullName</dd>
+
+    <dt>Email</dt>
+    <dd>@Model.Email</dd>
+
+    <dt>Vai trò</dt>
+    <dd>@Model.Role</dd>
+
+    <dt>Ngày tạo</dt>
+    <dd>@Model.CreatedAt?.ToString("dd/MM/yyyy HH:mm")</dd>
+</dl>
+
+<button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>

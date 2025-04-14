@@ -1,0 +1,29 @@
+﻿@model Chatluongcomputer.Models.Customer
+@{
+    ViewBag.Title = "Chỉnh sửa khách hàng";
+}
+
+<h2>Chỉnh sửa khách hàng</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FullName, "Họ tên khách hàng")
+        @Html.TextBoxFor(model => model.FullName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, "Email")
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Phone, "Số điện thoại")
+        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-success">Cập nhật</button>
+}

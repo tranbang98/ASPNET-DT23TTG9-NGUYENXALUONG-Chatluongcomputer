@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f90c24794d5841c797725f65c7b15ece" Name="Diagram1">
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.Discount" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.Order" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.Payment" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.Product" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.Review" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.SEOInfo" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.ShippingInfo" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.TrackingCode" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.User" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="ChatluongComputerDBModel.FK__Orders__UserId__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="ChatluongComputerDBModel.FK__Payments__OrderI__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="ChatluongComputerDBModel.FK__ShippingI__Order__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="ChatluongComputerDBModel.FK__TrackingC__Order__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="ChatluongComputerDBModel.FK__Reviews__Product__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="ChatluongComputerDBModel.FK__SEOInfo__Product__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="ChatluongComputerDBModel.FK__Reviews__UserId__412EB0B6" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ChatluongComputerDBModel.Customer" Width="1.5" PointX="7.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

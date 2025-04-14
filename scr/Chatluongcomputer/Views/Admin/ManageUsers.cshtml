@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Chatluongcomputer.Models.User>
+
+@{
+    ViewBag.Title = "Quản lý người dùng";
+}
+
+<h2>Quản lý người dùng</h2>
+
+<p>
+    @Html.ActionLink("Thêm người dùng mới", "Create", "Admin", null, new { @class = "btn btn-success" })
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tài khoản</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Vai trò</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UserId</td>
+                <td>@item.Username</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Role</td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.UserId }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.UserId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+﻿@model Chatluongcomputer.Models.Customer
+@{
+    ViewBag.Title = "Xóa khách hàng";
+}
+
+<h2>Bạn có chắc muốn xóa khách hàng này?</h2>
+<div>
+    <h4>@Model.FullName</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Email</dt>
+        <dd>@Model.Email</dd>
+
+        <dt>Điện thoại</dt>
+        <dd>@Model.Phone</dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Id)
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        @Html.ActionLink("Hủy", "Index", null, new { @class = "btn btn-secondary" })
+    }
+</div>

@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Chatluongcomputer.Models.User>
+@{
+    ViewBag.Title = "Quản lý Admin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="mb-4">📋 Quản lý Quản trị viên</h2>
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card border-primary shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">👥 Tổng số Admin</h5>
+                <p class="display-6">@Model.Count()</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-success shadow-sm">
+            <div class="card-body">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
+                    ➕ Thêm Admin
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-warning shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">📊 Thống kê theo quyền</h5>
+                <ul class="list-unstyled mb-0">
+                    @foreach (var group in Model.GroupBy(u => u.Role))
+                    {
+                        <li><strong>@group.Key</strong>: @group.Count()</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Danh sách Admin -->
+<div class="card shadow">
+    <div class="card-header bg-dark text-white">
+        Danh sách Quản trị viên
+    </div>
+    <div class="card-body p-0">
+        <table class="table table-hover table-striped mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Tài khoản</th>
+                    <th>Họ tên</th>
+                    <th>Email</th>
+                    <th>Quyền</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.UserId</td>
+                        <td>@item.Username</td>
+                        <td>@item.FullName</td>
+                        <td>@item.Email</td>
+                        <td>@item.Role</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning open-modal" data-url="@Url.Action("Edit", new { id = item.UserId })">Sửa</button>
+                            <button class="btn btn-danger openModal" data-type="delete" data-id="@item.UserId">🗑 Xóa</button>
+                            <button class="btn btn-info openModal" data-type="details" data-id="@item.UserId">📄 Chi tiết</button>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    @Html.Partial("_CreateModal")
+    @Html.Partial("_AdminModal")
+</div>
+@Html.Partial("_ToastMessage")
+@section Scripts {
+    <script src="~/Scripts/admin/admin-modal.js"></script>
+}

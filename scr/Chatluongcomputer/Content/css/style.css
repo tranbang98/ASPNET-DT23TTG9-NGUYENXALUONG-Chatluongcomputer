@@ -1,0 +1,158 @@
+﻿/* Cấu hình chung cho toàn bộ trang web */
+body {
+    font-family: Arial, sans-serif; /* Dùng font Google Roboto */
+    background-color: #f8f9fa; /* Màu nền nhạt */
+    color: #333; /* Màu chữ cơ bản */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /* Bỏ gạch chân cho tất cả các liên kết */
+    color: #007bff; /* Màu xanh cho các liên kết */
+}
+
+    a:hover {
+        color: #0056b3; /* Màu khi hover vào liên kết */
+    }
+
+/* Style cho Header */
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    background-color: #343a40;
+    padding: 10px 0;
+}
+
+    .navbar a {
+        color: white;
+        font-weight: 600;
+    }
+
+        .navbar a:hover {
+            color: #f1c40f;
+        }
+
+/* Style cho Main Content */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+/* Banner section */
+section.bg-light {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+    section.bg-light h1 {
+        font-size: 36px;
+        color: #333;
+    }
+
+    section.bg-light p {
+        font-size: 18px;
+        color: #555;
+    }
+
+/* Sản phẩm nổi bật */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+    .card img {
+        border-radius: 8px 8px 0 0;
+        width: 100%;
+    }
+
+.card-body {
+    padding: 15px;
+}
+
+    .card-body .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .card-body .card-text {
+        font-size: 14px;
+        color: #777;
+    }
+
+    /* Nút thêm vào giỏ hàng */
+    .card-body button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .card-body button:hover {
+            background-color: #0056b3;
+        }
+
+/* Đảm bảo chiều rộng tối đa của các form input */
+input,
+select,
+textarea {
+    max-width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        color: #f1c40f;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: #ddd;
+        }
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    section.bg-light h1 {
+        font-size: 28px;
+    }
+}

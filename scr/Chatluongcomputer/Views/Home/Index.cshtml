@@ -1,88 +1,68 @@
-﻿@{
+﻿@model dynamic
+@{
     ViewBag.Title = "Trang chủ";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!-- Header -->
+<header class="py-3 border-bottom d-flex justify-content-between align-items-center">
+    <div>
+        <img src="/Content/Image/logo/logo.jpg" alt="Logo" height="40" />
+    </div>
+    <div class="input-group w-50">
+        <input type="text" class="form-control" placeholder="Tìm sản phẩm...">
+        <button class="btn btn-primary">Tìm kiếm</button>
+    </div>
+    <div>
+        @Html.ActionLink("Đăng nhập Khách", "Login", "Customer", null, new { @class = "btn btn-outline-secondary" })
+        @Html.ActionLink("Đăng nhập Admin", "Login", "Admin", null, new { @class = "btn btn-outline-warning ms-2" })
+    </div>
+</header>
 
-    <!-- Header -->
-    @Html.Partial("_Header")
+<!-- Banner -->
+<section class="my-4 bg-light p-4 text-center">
+    <h1>Ưu đãi đặc biệt cho bạn!</h1>
+    <p>FREESHIP & RETURNS - LOYALTY PROGRAM</p>
+    <div class="d-flex justify-content-center gap-3">
+        <button class="btn btn-outline-primary">Free Shipping</button>
+        <button class="btn btn-outline-success">Loyalty Program</button>
+    </div>
+</section>
 
-    <!-- Hero Banner -->
-    <section class="my-4 bg-light p-4 text-center">
-        <h1>Giảm giá đặc biệt cho bạn!</h1>
-        <p>Ưu đãi hôm nay - Giao hàng toàn quốc</p>
-        <button class="btn btn-warning">Xem ngay</button>
-    </section>
-
-    <!-- CTA -->
-    <section class="row text-center my-4">
-        <div class="col"><button class="btn btn-outline-secondary w-100">Free Shipping & Returns</button></div>
-        <div class="col"><button class="btn btn-outline-secondary w-100">Loyalty Program</button></div>
-    </section>
-
-    <!-- Featured Products -->
-    <section class="my-5">
-        <h3>Sản phẩm nổi bật</h3>
-        <div class="row">
-            @for (int i = 0; i < 4; i++)
-            {
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="~/Content/Images/Products/Mainboards/ASUS-H110-K.png" class="card-img-top" alt="Sản phẩm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Product name</h5>
-                            <p>500.000đ</p>
-                            <button class="btn btn-primary">Add to cart</button>
-                        </div>
+<!-- Sản phẩm nổi bật -->
+<section class="container">
+    <h3>Sản phẩm nổi bật</h3>
+    <div class="row">
+        @for (int i = 0; i < 4; i++) {
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="/Content/Image/product-placeholder.png" alt="Sản phẩm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Product name</h5>
+                        <p class="card-text">$00.00</p>
+                        <button class="btn btn-primary">Add to Cart</button>
                     </div>
                 </div>
-            }
-        </div>
-    </section>
+            </div>
+        }
+    </div>
+</section>
 
-    <!-- Recommended -->
-    <section class="my-5">
-        <h3>Gợi ý cho bạn</h3>
-        <div class="row">
-            @for (int i = 0; i < 4; i++)
-            {
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="/Content/product.png" class="card-img-top" alt="Gợi ý">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Recommended product</h5>
-                            <p>450.000đ</p>
-                            <button class="btn btn-outline-primary">Add to cart</button>
-                        </div>
+<!-- Recommended -->
+<section class="container mt-5">
+    <h3>Dành cho bạn</h3>
+    <div class="row">
+        @for (int i = 0; i < 4; i++) {
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="/Content/Image/product-placeholder.png" alt="Sản phẩm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Product name</h5>
+                        <p class="card-text">$00.00</p>
+                        <button class="btn btn-primary">Add to Cart</button>
                     </div>
                 </div>
-            }
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="mt-5 bg-dark text-light p-4">
-        <div class="row">
-            <div class="col">
-                <h5>Về chúng tôi</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-light">Giới thiệu</a></li>
-                    <li><a href="#" class="text-light">Liên hệ</a></li>
-                </ul>
             </div>
-            <div class="col">
-                <h5>Hỗ trợ khách hàng</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-light">Chính sách bảo hành</a></li>
-                    <li><a href="#" class="text-light">Giao hàng & đổi trả</a></li>
-                </ul>
-            </div>
-            <div class="col">
-                <h5>Đăng ký nhận tin</h5>
-                <input type="text" class="form-control mb-2" placeholder="Email của bạn">
-                <button class="btn btn-warning w-100">Đăng ký</button>
-            </div>
-        </div>
-        <div class="text-center mt-3">© Chatluongcomputer 2025</div>
-    </footer>
-</div>
+        }
+    </div>
+</section>
