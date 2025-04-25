@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ChatLuongComputer.Models.MCategory>
+
+<div class="category-vertical bg-white p-3 border" >
+    
+    <ul class="list-group list-group-flush">
+        @foreach (var parent in Model.Where(x => x.ParentId == 0))
+        {
+            var children = Model.Where(x => x.ParentId == parent.Id).ToList();
+
+            <li class="list-group-item border-0 ps-0">
+                @if (children.Any())
+                {
+                    <div class="dropdown">
+                        <a href="@Url.Content("~/" + parent.Slug)" class="dropdown-toggle d-block text-dark text-decoration-none"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            @parent.Name
+                        </a>
+                        <ul class="dropdown-menu position-static border-0 shadow-sm ms-3">
+                            @foreach (var child in children)
+                            {
+                                <li>
+                                    <a class="dropdown-item" href="@Url.Content("~/" + child.Slug)">
+                                        @child.Name
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+                else
+                {
+                    <a href="@Url.Content("~/" + parent.Slug)" class="text-dark text-decoration-none d-block">
+                        @parent.Name
+                    </a>
+                }
+            </li>
+        }
+    </ul>
+</div>
