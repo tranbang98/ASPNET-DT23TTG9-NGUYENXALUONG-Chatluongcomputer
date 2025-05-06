@@ -175,7 +175,7 @@ namespace ChatLuongComputer.Controllers
             string body = "<html><body style='font-family: Arial, sans-serif; background-color: #fcffb0;'>";
             body += "<table style='margin: auto; border-collapse: collapse; width: 100%; background-color: #ffffff; border: 1px solid #ddd;'>";
             body += "<tr><td>";
-            body += "<div style='text-align: center; margin: 10px;background-color: #c2ffc2'><img src='http://campro.somee.com/Public/user/img/campro.png'></div>";
+            body += "<div style='text-align: center; margin: 10px;background-color: #c2ffc2'><img src='http://chatluongc/Public/user/img/logo.png'></div>";
             body += "<h2 style='text-align: center; color: #ffffff;'>Xác nhận đơn hàng</h2>";  // Màu xanh lá cây
             int userid = Convert.ToInt32(Session["User_ID"]);
             var user = db.Users.FirstOrDefault(m => m.ID == userid);
@@ -191,12 +191,9 @@ namespace ChatLuongComputer.Controllers
             }
             body += "</table>";
             body += "<p style='margin: 10px; font-style: italic; color: #999;'>Đây là tin nhắn được gửi tự động từ hệ thống, vui lòng không trả lời tin nhắn này.</p>";
-            body += "<div style='text-align: center; margin-top: 20px;'><a href='https://campro.somee.com' style='display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: #fff; text-decoration: none; border-radius: 5px;'>Kiểm tra đơn hàng</a></div>";
+            body += "<div style='text-align: center; margin-top: 20px;'><a href='https://chatluongcomputer.com' style='display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: #fff; text-decoration: none; border-radius: 5px;'>Kiểm tra đơn hàng</a></div>";
             body += "</td></tr></table>";
             body += "<div style='padding: 20px; text-align: center; background-color: #f5f5f5;'>";
-            body += "<p>Hãy mua sắm cùng Shopee</p>";
-            body += "<a href='https://campro.somee.com'><img src='https://paragon.com.vn/wp-content/uploads/2021/06/Ban-sao-cua-Ban-sao-cua-Ban-sao-cua-Khong-co-tieu-de-1-2-1024x320.png' alt='Google Play' style='height: 40px; margin: 0 5px;'></a>";
-            body += "<a href='https://campro.somee.com'><img src='https://w7.pngwing.com/pngs/34/523/png-transparent-app-store-apple-logo-apple-text-logo-video-game.png' alt='App Store' style='height: 40px; margin: 0 5px;'></a>";
             body += "</div>";
             body += "</body></html>";
 

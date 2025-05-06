@@ -171,7 +171,8 @@
                         <!-- RETURNE-CONTINUE-SHOP START -->
                         <div class="returne-continue-shop">
                             <a href="~/" class="continueshoping"><i class="fa fa-chevron-left"></i>Tiếp tục mua hàng</a>
-                            <a style="display:none"; href="" id="thanh-toan" type="submit" class="procedtocheckout">Hoàn tất<i class="fa fa-chevron-right"></i></a>   
+                            <a style="display:none" href="account/order" id="thanh-toan" class="procedtocheckout">Hoàn tất<i class="fa fa-chevron-right"></i></a>
+
                             <a style="margin-right: 10px;" href="#" id="paymentLink" class="procedtocheckout">Quét mã thanh toán</a>
                         </div>
                         <!-- RETURNE-CONTINUE-SHOP END -->
@@ -197,7 +198,7 @@
         var productNameElement = document.querySelector(".product-name a");
         var productName = productNameElement.innerText;
         var productNameWithoutDiacritics = removeVietnameseDiacritics(productName);
-        var vietQRLink = "https://vietqr.co/api/generate/vcb/1026424095/CAOSILIEM/" + tongTien + "/" + productNameWithoutDiacritics + "?style=1&logo=1";
+        var vietQRLink = "https://vietqr.co/api/generate/stb/07012329040/NGUYEN%20XA%20LUONG" + tongTien + "/" + productNameWithoutDiacritics + "?style=1&logo=1";
         window.open(vietQRLink, "_blank");
         document.getElementById("thanh-toan").style.display = "inline-block";
         document.getElementById("paymentLink").style.display = "none";

@@ -28,20 +28,7 @@
 </section>
 @Html.Action("LatestNew", "Module")
 
-<div id="overlay" onclick="hideImage()"
-     style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); z-index: 9998;">
 
-    <div onclick="event.stopPropagation()"
-         style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-
-        <button id="btnexit" onclick="hideImage()"
-                style="position: absolute; top: 0; right: 0; padding: 10px; background-color: red; color: white; border: none; cursor: pointer;">
-            X
-        </button>
-
-        <img id="image" src="~/Public/user/img/30-04.png" alt="50 nam" style="z-index: 9999">
-    </div>
-</div>
 
 <script>
     function hideImage() {

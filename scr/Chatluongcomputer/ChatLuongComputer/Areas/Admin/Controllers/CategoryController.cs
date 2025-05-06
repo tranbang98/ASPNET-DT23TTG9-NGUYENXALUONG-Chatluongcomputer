@@ -48,14 +48,17 @@ namespace ChatLuongComputer.Areas.Admin.Controllers
         public ActionResult Trash()
         {
             ViewBag.Title = "Danh sách các loại sản phẩm";
-            ///////Select * from
+
             var model = db.Categorys
                 .Where(m => m.Status == 0)
                 .OrderByDescending(m => m.Created_at)
                 .ToList();
 
+            ViewBag.GetAllCategory = db.Categorys.Where(m => m.Status != 0).ToList();
+
             return View("Trash", model);
         }
+
 
         // GET: Admin/Category/Details/5
         public ActionResult Details(int? id)

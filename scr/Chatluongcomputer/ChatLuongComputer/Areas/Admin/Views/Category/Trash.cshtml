@@ -64,7 +64,7 @@
                                         {
                                             foreach (var il in ViewBag.GetAllCategory)
                                             {
-                                                if (item.ParentId == il.ID)
+                                                if (item.ParentId == il.Id)
                                                 {
                                                     <span>@il.Name@*Cấp con*@</span>
                                                 }

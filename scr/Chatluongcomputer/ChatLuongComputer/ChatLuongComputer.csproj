@@ -2350,14 +2350,6 @@
     <Content Include="Public\admin\status\js\karma.laclac.min.js" />
     <Content Include="Public\admin\status\js\sweetalert2.min.js" />
     <Content Include="Public\admin\status\js\toastr.min.js" />
-    <Content Include="Public\css\all.min.css" />
-    <Content Include="Public\css\bootstrap.min.css" />
-    <Content Include="Public\css\easy-responsive-tabs.css" />
-    <Content Include="Public\css\global.css" />
-    <Content Include="Public\css\imageSprite.css" />
-    <Content Include="Public\css\owl.carousel.css" />
-    <Content Include="Public\css\slider.css" />
-    <Content Include="Public\css\style.css" />
     <Content Include="Public\js\aliger.js" />
     <Content Include="Public\js\bootstrap.bundle.min.js" />
     <Content Include="Public\js\bootstrap.min.js" />
@@ -2703,7 +2695,6 @@
     <Content Include="Views\Site\Contact.cshtml" />
     <Content Include="Views\Shared\_Nofit.cshtml" />
     <Content Include="Public\js\bootstrap.min.js.map" />
-    <Content Include="Public\css\bootstrap.min.css.map" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Cart\Checkout.cshtml" />
     <Content Include="Views\Site\ProductDetail.cshtml" />

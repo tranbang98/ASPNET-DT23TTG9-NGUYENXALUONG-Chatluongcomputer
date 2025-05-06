@@ -20,22 +20,20 @@ namespace ChatLuongComputer.Controllers
         //}
 
         [HttpPost]
-        public JsonResult UserLogin(String User, String Password)
+        public JsonResult UserLogin(string User, string Password)
         {
-            int count_username = db.Users.Where(m => m.Status == 1 && ((m.Phone).ToString() == User || m.Email == User || m.Name == User) && m.Access == 0).Count();
+            int count_username = db.Users.Where(m => m.Status == 1 && ((m.Phone).ToString() == User || m.Email == User || m.Name == User)).Count();
             if (count_username == 0)
             {
-
-                return Json(new { s = 1 });
+                return Json(new { s = 1 }); // Tài khoản không tồn tại
             }
             else
             {
-                Password = MyString.ToMD5(Password);
-                //Password = Password;
+                Password = MyString.ToMD5(Password); // Mã hóa mật khẩu
                 var user_acount = db.Users.Where(m => m.Status == 1 && ((m.Phone).ToString() == User || m.Email == User || m.Name == User) && m.Password == Password);
                 if (user_acount.Count() == 0)
                 {
-                    return Json(new { s = 2 });
+                    return Json(new { s = 2 }); // Sai mật khẩu
                 }
                 else
                 {
@@ -44,8 +42,9 @@ namespace ChatLuongComputer.Controllers
                     Session["User_ID"] = user.ID;
                 }
             }
-            return Json(new { s = 0 });
+            return Json(new { s = 0 }); // Đăng nhập thành công
         }
+
 
         public ActionResult UserLogout(String url)
         {
